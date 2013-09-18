@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
   end
   
   def reset_database
-    session[:session_id] = nil
+    # session[:session_id] = nil
     DB::reset(session[:session_id])
     reset_session
     redirect_to store_path, :notice => 'Database was reset!'
